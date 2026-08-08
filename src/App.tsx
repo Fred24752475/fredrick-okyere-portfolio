@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { profile, projects, skillGroups } from './content';
+import { photos, profile, projects, skillGroups } from './content';
 
 function useReveal() {
   useEffect(() => {
@@ -33,6 +33,7 @@ export default function App() {
           <nav className="nav-links" aria-label="Primary">
             <a href="#about">About</a>
             <a href="#work">Work</a>
+            <a href="#photos">Photos</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
           </nav>
@@ -64,16 +65,12 @@ export default function App() {
               </div>
             </div>
 
-            <div className="photo-frame" aria-label="Profile photo placeholder">
-              {/* Drop your photo at public/fredrick.jpg and uncomment:
-              <img src="/fredrick.jpg" alt={profile.name} />
-              */}
-              <div className="photo-fallback" aria-hidden>
-                F
-              </div>
-              <div className="photo-caption">
-                Drop your photo at <code>public/fredrick.jpg</code>
-              </div>
+            <div className="photo-frame">
+              <img
+                src="/photos/07-fredrick-typing.png"
+                alt={`${profile.name} coding at Cursor UCC Hackathon`}
+              />
+              <div className="photo-caption">Cursor UCC Hackathon · LexGH</div>
             </div>
           </div>
         </section>
@@ -125,6 +122,28 @@ export default function App() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section id="photos">
+          <div className="shell">
+            <p className="section-label reveal">Community</p>
+            <h2 className="section-title reveal">Explore Fredrick in photos</h2>
+            <p className="photos-intro reveal">
+              Cursor UCC Hackathon — building with LexGH, shipping under pressure,
+              and taking 1st place.
+            </p>
+            <div className="photo-gallery">
+              {photos.map((photo) => (
+                <figure
+                  key={photo.src}
+                  className={`gallery-item reveal${photo.wide ? ' wide' : ''}`}
+                >
+                  <img src={photo.src} alt={photo.alt} loading="lazy" />
+                  <figcaption>{photo.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
 

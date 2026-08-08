@@ -53,12 +53,13 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/Fred24752475/American-buddy-bot',
   },
   {
-    name: 'LEXai',
-    role: 'Hackathon builder',
+    name: 'LEXai / LexGH',
+    role: 'Hackathon · 1st place',
     summary:
-      'TypeScript hackathon project exploring AI-assisted experiences under tight shipping constraints.',
-    stack: ['TypeScript', 'AI'],
+      'Cursor UCC Hackathon — team LexGH took 1st place ($500 Cursor Credits). Built under pressure with real collaboration, late nights, and a shipping mindset.',
+    stack: ['TypeScript', 'AI', 'Hackathon', 'Team'],
     repoUrl: 'https://github.com/Fred24752475/LEXai',
+    featured: true,
   },
   {
     name: 'UCC Shuttle Tracker',
@@ -77,6 +78,79 @@ export const projects: Project[] = [
     stack: ['Cybersecurity', 'Windows', 'Log analysis'],
     repoUrl:
       'https://github.com/Fred24752475/Log-Analysis-with-Windows-Event-Viewer',
+  },
+];
+
+export type Photo = {
+  src: string;
+  alt: string;
+  caption: string;
+  wide?: boolean;
+};
+
+export const photos: Photo[] = [
+  {
+    src: '/photos/07-fredrick-typing.png',
+    alt: 'Fredrick coding at Cursor UCC Hackathon',
+    caption: 'In the zone — Cursor UCC Hackathon',
+    wide: true,
+  },
+  {
+    src: '/photos/06-fredrick-mobile.png',
+    alt: 'Fredrick testing on phone beside teammate',
+    caption: 'Building & testing with the team',
+  },
+  {
+    src: '/photos/02-cursor-banner.png',
+    alt: 'Hackathon room with Cursor banner',
+    caption: 'Late-night build energy',
+  },
+  {
+    src: '/photos/08-collab-screen.png',
+    alt: 'Pairing on a laptop at the hackathon',
+    caption: 'Pair debugging',
+  },
+  {
+    src: '/photos/11-lexgh-first.png',
+    alt: 'LexGH team holding first place check',
+    caption: '1st place — LexGH · Cursor UCC Hackathon',
+    wide: true,
+  },
+  {
+    src: '/photos/12-lexgh-win.png',
+    alt: 'LexGH winners with Cursor credits check',
+    caption: '$500 Cursor Credits · 1st Place Winner',
+  },
+  {
+    src: '/photos/13-handshake.png',
+    alt: 'Team handshake with prize check',
+    caption: 'LexGH celebrating the win',
+  },
+  {
+    src: '/photos/14-group.png',
+    alt: 'Full Cursor Hackathon group photo',
+    caption: 'Cursor Hackathon · UCC community',
+    wide: true,
+  },
+  {
+    src: '/photos/09-lab-huddle.png',
+    alt: 'Team huddled around a monitor',
+    caption: 'Huddle around the build',
+  },
+  {
+    src: '/photos/10-team-huddle.png',
+    alt: 'Collaborating around dual monitors',
+    caption: 'Shipping together',
+  },
+  {
+    src: '/photos/04-team-table.png',
+    alt: 'Team working at shared tables',
+    caption: 'Table-side collaboration',
+  },
+  {
+    src: '/photos/01-focus.png',
+    alt: 'Focused coding session at hackathon',
+    caption: 'Focus mode',
   },
 ];
 
