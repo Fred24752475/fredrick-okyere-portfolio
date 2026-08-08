@@ -140,6 +140,26 @@ img {
   margin-bottom: 1.75rem;
 }
 
+.hero-apk-hint {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.hero-apk-hint a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.hero-apk-hint a:hover {
+  text-decoration: underline;
+}
+
+.try-app-link {
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
 .cta-row {
   display: flex;
   flex-wrap: wrap;

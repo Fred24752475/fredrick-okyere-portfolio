@@ -30,21 +30,27 @@ export default function Home() {
               <p className="hero-tag">{profile.tagline}</p>
               <p className="hero-meta">{profile.location}</p>
               <div className="cta-row">
-                <a className="btn btn-primary" href="#work">
+                <a
+                  className="btn btn-primary"
+                  href={profile.downloadPage}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Test the app now
+                </a>
+                <a className="btn btn-ghost" href="#work">
                   View work
                 </a>
                 <a className="btn btn-ghost" href="#contact">
                   Contact
                 </a>
-                <a
-                  className="btn btn-ghost"
-                  href={profile.github}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
               </div>
+              <p className="hero-apk-hint">
+                Android APK · always the latest build ·{' '}
+                <a href={profile.apkUrl} download="saylyt.apk">
+                  direct download
+                </a>
+              </p>
             </div>
 
             <div className="photo-frame">
@@ -100,6 +106,21 @@ export default function Home() {
                   ))}
                 </div>
                 <div className="link-row">
+                  {project.tryAppUrl && (
+                    <a
+                      className="try-app-link"
+                      href={project.tryAppUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Test the app now →
+                    </a>
+                  )}
+                  {project.apkUrl && (
+                    <a href={project.apkUrl} download="saylyt.apk">
+                      Download APK →
+                    </a>
+                  )}
                   {project.liveUrl && (
                     <a href={project.liveUrl} target="_blank" rel="noreferrer">
                       Live site →

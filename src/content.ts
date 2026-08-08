@@ -12,6 +12,10 @@ export const profile = {
   tiktok: 'https://www.tiktok.com/@saylyt',
   tiktokHandle: '@saylyt',
   saylytLogo: '/saylyt-logo.png',
+  /** Always the latest APK — same filename when you redeploy updates. */
+  apkUrl: 'https://stuchatserver.onrender.com/downloads/saylyt.apk',
+  /** Install page with steps — safest link for recruiters. */
+  downloadPage: 'https://saylyt.com/download',
   location: 'Ghana · Open to opportunities',
   about: [
     'I’m a builder who ships end-to-end: mobile clients in Flutter, backends on Supabase and Node, and edge/CDN work on Cloudflare — plus Redis-backed APIs on Render when speed matters.',
@@ -27,6 +31,8 @@ export type Project = {
   stack: string[];
   liveUrl?: string;
   repoUrl?: string;
+  apkUrl?: string;
+  tryAppUrl?: string;
   featured?: boolean;
 };
 
@@ -47,6 +53,8 @@ export const projects: Project[] = [
     ],
     liveUrl: 'https://saylyt.com',
     repoUrl: 'https://github.com/Fred24752475',
+    tryAppUrl: 'https://saylyt.com/download',
+    apkUrl: 'https://stuchatserver.onrender.com/downloads/saylyt.apk',
     featured: true,
   },
   {
