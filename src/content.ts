@@ -9,8 +9,8 @@ export const profile = {
   phoneHref: 'tel:+233530056721',
   linkedin: 'https://www.linkedin.com/in/fredrick-okyere-43677124a',
   github: 'https://github.com/Fred24752475',
-  tiktok: 'https://www.tiktok.com/@saylyt',
-  tiktokHandle: '@saylyt',
+  tiktok: 'https://www.tiktok.com/@1.saylyt',
+  tiktokHandle: '@1.saylyt',
   saylytLogo: '/saylyt-logo.png',
   /** Always the latest APK — same filename when you redeploy updates. */
   apkUrl: 'https://stuchatserver.onrender.com/downloads/saylyt.apk',
