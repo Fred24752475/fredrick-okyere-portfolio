@@ -500,6 +500,18 @@ section {
   text-decoration: underline;
 }
 
+.contact-block .btn {
+  text-decoration: none;
+}
+
+.contact-block .btn-primary {
+  color: #10140c;
+}
+
+.contact-block .btn-ghost {
+  color: var(--ink);
+}
+
 .tiktok-link {
   display: inline-flex;
   align-items: center;
