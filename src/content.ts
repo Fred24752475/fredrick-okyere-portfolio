@@ -85,74 +85,185 @@ export type Photo = {
   src: string;
   alt: string;
   caption: string;
-  wide?: boolean;
 };
 
-export const photos: Photo[] = [
+export type PhotoGroup = {
+  id: string;
+  title: string;
+  description: string;
+  photos: Photo[];
+};
+
+/** Home page shows only these 3 — keep this short as more photos land. */
+export const featuredPhotos: Photo[] = [
+  {
+    src: '/photos/11-lexgh-first.png',
+    alt: 'LexGH team holding first place check at Cursor UCC Hackathon',
+    caption: '1st place — LexGH · Cursor UCC Hackathon',
+  },
   {
     src: '/photos/07-fredrick-typing.png',
     alt: 'Fredrick coding at Cursor UCC Hackathon',
-    caption: 'In the zone — Cursor UCC Hackathon',
-    wide: true,
+    caption: 'In the zone — building under pressure',
   },
   {
-    src: '/photos/06-fredrick-mobile.png',
-    alt: 'Fredrick testing on phone beside teammate',
-    caption: 'Building & testing with the team',
-  },
-  {
-    src: '/photos/02-cursor-banner.png',
-    alt: 'Hackathon room with Cursor banner',
-    caption: 'Late-night build energy',
-  },
-  {
-    src: '/photos/08-collab-screen.png',
-    alt: 'Pairing on a laptop at the hackathon',
-    caption: 'Pair debugging',
-  },
-  {
-    src: '/photos/11-lexgh-first.png',
-    alt: 'LexGH team holding first place check',
-    caption: '1st place — LexGH · Cursor UCC Hackathon',
-    wide: true,
-  },
-  {
-    src: '/photos/12-lexgh-win.png',
-    alt: 'LexGH winners with Cursor credits check',
-    caption: '$500 Cursor Credits · 1st Place Winner',
-  },
-  {
-    src: '/photos/13-handshake.png',
-    alt: 'Team handshake with prize check',
-    caption: 'LexGH celebrating the win',
-  },
-  {
-    src: '/photos/14-group.png',
-    alt: 'Full Cursor Hackathon group photo',
-    caption: 'Cursor Hackathon · UCC community',
-    wide: true,
-  },
-  {
-    src: '/photos/09-lab-huddle.png',
-    alt: 'Team huddled around a monitor',
-    caption: 'Huddle around the build',
-  },
-  {
-    src: '/photos/10-team-huddle.png',
-    alt: 'Collaborating around dual monitors',
-    caption: 'Shipping together',
-  },
-  {
-    src: '/photos/04-team-table.png',
-    alt: 'Team working at shared tables',
-    caption: 'Table-side collaboration',
-  },
-  {
-    src: '/photos/01-focus.png',
-    alt: 'Focused coding session at hackathon',
-    caption: 'Focus mode',
+    src: '/photos/19-headshot.png',
+    alt: 'Fredrick in formal attire',
+    caption: 'Ready for the room',
   },
 ];
+
+export const photoGroups: PhotoGroup[] = [
+  {
+    id: 'hackathon',
+    title: 'Cursor UCC Hackathon',
+    description:
+      'LexGH · 1st place · $500 Cursor Credits — late nights, pairing, and the win.',
+    photos: [
+      {
+        src: '/photos/11-lexgh-first.png',
+        alt: 'LexGH team holding first place check',
+        caption: '1st place — LexGH',
+      },
+      {
+        src: '/photos/12-lexgh-win.png',
+        alt: 'LexGH winners with Cursor credits check',
+        caption: '$500 Cursor Credits',
+      },
+      {
+        src: '/photos/13-handshake.png',
+        alt: 'Team handshake with prize check',
+        caption: 'Celebrating the win',
+      },
+      {
+        src: '/photos/14-group.png',
+        alt: 'Full Cursor Hackathon group photo',
+        caption: 'The whole room',
+      },
+      {
+        src: '/photos/07-fredrick-typing.png',
+        alt: 'Fredrick coding at the hackathon',
+        caption: 'Deep focus',
+      },
+      {
+        src: '/photos/06-fredrick-mobile.png',
+        alt: 'Fredrick testing on phone beside teammate',
+        caption: 'Build & test',
+      },
+      {
+        src: '/photos/02-cursor-banner.png',
+        alt: 'Hackathon room with Cursor banner',
+        caption: 'Cursor energy',
+      },
+      {
+        src: '/photos/08-collab-screen.png',
+        alt: 'Pairing on a laptop at the hackathon',
+        caption: 'Pair debugging',
+      },
+      {
+        src: '/photos/09-lab-huddle.png',
+        alt: 'Team huddled around a monitor',
+        caption: 'Huddle around the build',
+      },
+      {
+        src: '/photos/10-team-huddle.png',
+        alt: 'Collaborating around dual monitors',
+        caption: 'Shipping together',
+      },
+      {
+        src: '/photos/04-team-table.png',
+        alt: 'Team working at shared tables',
+        caption: 'Table-side collab',
+      },
+      {
+        src: '/photos/05-pair-debug.png',
+        alt: 'Collaborative debugging moment',
+        caption: 'Two heads, one screen',
+      },
+      {
+        src: '/photos/01-focus.png',
+        alt: 'Focused coding session at hackathon',
+        caption: 'Focus mode',
+      },
+      {
+        src: '/photos/03-building.png',
+        alt: 'Building during the hackathon',
+        caption: 'Still shipping',
+      },
+    ],
+  },
+  {
+    id: 'formal',
+    title: 'Formal & campus',
+    description: 'Presentation-day energy, campus moments, and team portraits.',
+    photos: [
+      {
+        src: '/photos/19-headshot.png',
+        alt: 'Fredrick formal headshot',
+        caption: 'Portrait',
+      },
+      {
+        src: '/photos/16-formal-smile.png',
+        alt: 'Fredrick smiling in a suit outdoors',
+        caption: 'Golden-hour formal',
+      },
+      {
+        src: '/photos/18-thinking.png',
+        alt: 'Fredrick in suit, thoughtful pose',
+        caption: 'Thinking pose',
+      },
+      {
+        src: '/photos/23-ledge-portrait.png',
+        alt: 'Fredrick seated portrait in formal wear',
+        caption: 'Campus portrait',
+      },
+      {
+        src: '/photos/24-caseley-hayford.png',
+        alt: 'Fredrick at Caseley Hayford Hall',
+        caption: 'Caseley Hayford',
+      },
+      {
+        src: '/photos/25-castford.png',
+        alt: 'Fredrick at Castford emblem',
+        caption: 'Castford · Truth and Courage',
+      },
+      {
+        src: '/photos/17-team-formal.png',
+        alt: 'Four teammates in formal attire',
+        caption: 'Team formal',
+      },
+      {
+        src: '/photos/20-duo-palms.png',
+        alt: 'Two teammates in suits by palm trees',
+        caption: 'Duo · palms',
+      },
+      {
+        src: '/photos/21-duo-campus.png',
+        alt: 'Two teammates on campus in suits',
+        caption: 'Duo · campus',
+      },
+      {
+        src: '/photos/22-duo-smiles.png',
+        alt: 'Two teammates smiling in formal wear',
+        caption: 'Duo · smiles',
+      },
+    ],
+  },
+  {
+    id: 'setup',
+    title: 'Behind the build',
+    description: 'Desk energy — where the late-night work actually happens.',
+    photos: [
+      {
+        src: '/photos/15-desk-setup.png',
+        alt: 'Fredrick at his desk setup with laptop and RGB keyboard',
+        caption: 'Desk setup',
+      },
+    ],
+  },
+];
+
+export const allPhotos: Photo[] = photoGroups.flatMap((g) => g.photos);
 
 export const skillGroups: { title: string; items: string[] }[] = [
   {
