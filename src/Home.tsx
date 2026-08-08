@@ -217,7 +217,7 @@ export default function Home() {
               </p>
               <div className="cta-row" style={{ marginTop: '0.75rem' }}>
                 <a className="btn btn-primary" href={profile.phoneHref}>
-                  Call / WhatsApp
+                  {profile.phone}
                 </a>
                 <a className="btn btn-ghost" href={`mailto:${profile.email}`}>
                   Email me
