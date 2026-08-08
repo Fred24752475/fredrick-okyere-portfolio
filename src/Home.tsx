@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { featuredPhotos, profile, projects, skillGroups } from './content';
+import SiteNav from './SiteNav';
 import { useReveal } from './useReveal';
 
 export default function Home() {
@@ -7,20 +8,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="site-nav">
-        <div className="shell">
-          <a className="brand-mark" href="#top">
-            {profile.shortName}
-          </a>
-          <nav className="nav-links" aria-label="Primary">
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#photos">Photos</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
-      </header>
+      <SiteNav />
 
       <main id="top">
         <section className="hero hero-animate">

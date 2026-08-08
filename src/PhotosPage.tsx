@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { allPhotos, photoGroups, profile } from './content';
+import SiteNav from './SiteNav';
 import { useReveal } from './useReveal';
 
 export default function PhotosPage() {
@@ -7,19 +8,7 @@ export default function PhotosPage() {
 
   return (
     <>
-      <header className="site-nav">
-        <div className="shell">
-          <Link className="brand-mark" to="/">
-            {profile.shortName}
-          </Link>
-          <nav className="nav-links" aria-label="Primary">
-            <Link to="/">Home</Link>
-            <Link to="/#work">Work</Link>
-            <Link to="/photos">Photos</Link>
-            <Link to="/#contact">Contact</Link>
-          </nav>
-        </div>
-      </header>
+      <SiteNav />
 
       <main className="photos-page">
         <div className="shell">
