@@ -272,11 +272,23 @@ section {
   margin-bottom: 0.65rem;
 }
 
-.project h3 {
+.project h3,
+.project-name {
   font-family: var(--font-display);
   font-size: clamp(1.45rem, 3vw, 1.9rem);
   margin: 0;
   letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.project-logo {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 7px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .project-role {
@@ -357,6 +369,27 @@ section {
 
 .contact-block a:hover {
   text-decoration: underline;
+}
+
+.tiktok-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none !important;
+}
+
+.tiktok-logo {
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+}
+
+.tiktok-handle {
+  color: var(--muted);
+  font-weight: 500;
 }
 
 .photos-intro {

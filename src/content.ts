@@ -5,8 +5,13 @@ export const profile = {
     'I build full-stack products — Flutter apps, realtime backends, and cloud infra — with a cybersecurity mindset.',
   email: 'fredrickokyere60@gmail.com',
   emailAlt: 'fredrickokyere777@gmail.com',
+  phone: '+233530056721',
+  phoneHref: 'tel:+233530056721',
   linkedin: 'https://www.linkedin.com/in/fredrick-okyere-43677124a',
   github: 'https://github.com/Fred24752475',
+  tiktok: 'https://www.tiktok.com/@saylyt',
+  tiktokHandle: '@saylyt',
+  saylytLogo: '/saylyt-logo.png',
   location: 'Ghana · Open to opportunities',
   about: [
     'I’m a builder who ships end-to-end: mobile clients in Flutter, backends on Supabase and Node, and edge/CDN work on Cloudflare — plus Redis-backed APIs on Render when speed matters.',

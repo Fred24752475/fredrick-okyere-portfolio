@@ -79,7 +79,16 @@ export default function Home() {
                 className={`project reveal${project.featured ? ' featured' : ''}`}
               >
                 <div className="project-top">
-                  <h3>{project.name}</h3>
+                  <h3 className="project-name">
+                    {project.name === 'SAYLYT' && (
+                      <img
+                        className="project-logo"
+                        src={profile.saylytLogo}
+                        alt="SAYLYT logo"
+                      />
+                    )}
+                    {project.name}
+                  </h3>
                   <span className="project-role">{project.role}</span>
                 </div>
                 <p>{project.summary}</p>
@@ -156,6 +165,10 @@ export default function Home() {
             <h2 className="section-title">Let’s talk</h2>
             <div className="contact-block">
               <p>
+                Phone:{' '}
+                <a href={profile.phoneHref}>{profile.phone}</a>
+              </p>
+              <p>
                 Email:{' '}
                 <a href={`mailto:${profile.email}`}>{profile.email}</a>
               </p>
@@ -175,17 +188,38 @@ export default function Home() {
                   @Fred24752475
                 </a>
               </p>
+              <p className="contact-tiktok">
+                TikTok:{' '}
+                <a
+                  className="tiktok-link"
+                  href={profile.tiktok}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    className="tiktok-logo"
+                    src={profile.saylytLogo}
+                    alt="SAYLYT"
+                  />
+                  <span>
+                    SAYLYT <span className="tiktok-handle">{profile.tiktokHandle}</span>
+                  </span>
+                </a>
+              </p>
               <div className="cta-row" style={{ marginTop: '0.75rem' }}>
-                <a className="btn btn-primary" href={`mailto:${profile.email}`}>
+                <a className="btn btn-primary" href={profile.phoneHref}>
+                  Call / WhatsApp
+                </a>
+                <a className="btn btn-ghost" href={`mailto:${profile.email}`}>
                   Email me
                 </a>
                 <a
                   className="btn btn-ghost"
-                  href={profile.linkedin}
+                  href={profile.tiktok}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  LinkedIn
+                  TikTok
                 </a>
               </div>
             </div>
