@@ -72,7 +72,7 @@ export default function App() {
                 F
               </div>
               <div className="photo-caption">
-                Add <code>public/fredrick.jpg</code> to show your photo here
+                Drop your photo at <code>public/fredrick.jpg</code>
               </div>
             </div>
           </div>
